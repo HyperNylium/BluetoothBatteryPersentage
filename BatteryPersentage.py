@@ -13,5 +13,3 @@ def GetDeviceBatteryPersentage(device_name: str = None, connectivity_type: str =
             return error
     else:
         raise ValueError("device_name must be provided")
-
-print(GetDeviceBatteryPersentage("BSK V3 PRO")) # "BSK V3 PRO" is my device name. You have to change this to your own device name
