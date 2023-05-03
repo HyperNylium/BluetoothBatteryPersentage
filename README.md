@@ -1,12 +1,5 @@
-# Setup Guide
-
-This guide provides instructions on setting up the script for your Razor Basilisk v3 Pro device.
-
-## Tested Devices
-- Razor Basilisk v3 Pro
 
 ## Requirements
-Before running the script, make sure you have the following:
 
 1. **Device Name**: You need to provide the name of your device for the PowerShell command to work. If you don't, an error will be raised to let you know. You can find the device name in Device Manager under Bluetooth. Navigate to: `Device Manager > Bluetooth > [mouse, keyboard, headphones name]`.
 
@@ -19,12 +12,26 @@ Before running the script, make sure you have the following:
    - The PowerShell command should return the battery percentage value, such as `90` or `50`.
     - The Device Manager window should display the battery percentage as `90%` or `50%`.
 
+## Tested Devices
+|         Device          | Battery Data |
+|:-----------------------:|:------------:|
+| Razor Basilisk V3 Pro   |     Yes      |
+| Airpods pro gen 2       |      No      |
+> These are all the bluetooth devices I have, sorry...
+
 ## Instructions
-Follow these steps to set up the script:
 
-1. You need to import the function into your own script:<br>`from BatteryPersentage import GetDeviceBatteryPersentage`
+1. You need to import the function into your own script:
 
-2. Just for testing purposes, you can print it:<br>`print(GetDeviceBatteryPersentage("YOUR_DEVICE_NAME"))`
+```python
+    from BatteryPersentage import GetDeviceBatteryPersentage
+```
+2. All you need to do is call the function:
+
+```python
+    BatteryPer = GetDeviceBatteryPersentage("YOUR_DEVICE_NAME") # returns persentage as integer
+    print(BatteryPer) # will print out something like: 95
+```
 
 ## Additional Notes
 - Make sure your device is properly paired with your computer before running the script.
